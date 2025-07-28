@@ -1,0 +1,108 @@
+{
+  "info": {
+    "name": "Weyoco Campaign API",
+    "_postman_id": "weyoco-campaign-api-id",
+    "description": "Postman test collection for Weyoco Campaign CRUD API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Get All Campaigns",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3001/api/campaigns",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3001",
+          "path": [
+            "api",
+            "campaigns"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Create Campaign",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"title\": \"Launch Promo\",\n  \"description\": \"New campaign for product launch\",\n  \"startDate\": \"2025-08-01\",\n  \"endDate\": \"2025-08-15\",\n  \"budget\": 15000\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3001/api/campaigns",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3001",
+          "path": [
+            "api",
+            "campaigns"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Update Campaign",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"title\": \"Updated Promo\",\n  \"description\": \"Updated campaign description\",\n  \"startDate\": \"2025-08-05\",\n  \"endDate\": \"2025-08-20\",\n  \"budget\": 20000\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3001/api/campaigns/:id",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3001",
+          "path": [
+            "api",
+            "campaigns",
+            ":id"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Delete Campaign",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3001/api/campaigns/:id",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3001",
+          "path": [
+            "api",
+            "campaigns",
+            ":id"
+          ]
+        }
+      }
+    }
+  ]
+}
